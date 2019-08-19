@@ -1,0 +1,56 @@
+.tests{
+  width: calc(100% - 320px);
+  margin: 0;
+  margin: 0 50px;
+}
+
+.tests__flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tests h2 {
+  margin-bottom: 50px;
+}
+
+.test {
+  width: 350px;
+  height: 120px;
+  margin: 10px 5px;
+  padding: 20px 50px;
+}
+
+.test_new {
+  background: linear-gradient(0deg, #EC6236 0%, #FF9371 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.test_new:hover h3{
+  transition: .3s;
+  opacity: 0;
+}
+
+.test_new:hover span{
+  transition: .3s;
+  margin-left: calc(50% - 30px);
+}
+
+.test_new span {
+  transition: .3s;
+  font-weight: normal;
+  font-size: 100px;
+  margin-right: 20px;
+}
+
+.test_new h3{
+  white-space: nowrap;
+  font-family: "Montserrat SemiBold";
+  font-size: 20px;
+  transition: .3s;
+}

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HeaderSignUp from './components/HeaderSignUp/HeaderSignUp';
 import HeaderSignIn from './components/HeaderSignIn/HeaderSignIn';
+import Cabinet from './components/Cabinet/Cabinet';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={HeaderSignUp} />
           <Route path='/signin' component={HeaderSignIn} />
+          <Route path='/cabinet' component={Cabinet} />
         </Switch>
       </div>
     </BrowserRouter>

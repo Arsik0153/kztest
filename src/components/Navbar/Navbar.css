@@ -7,6 +7,10 @@
   margin-top: -50px;
 }
 
+.navbar a:hover{
+  text-decoration: none;
+}
+
 .navbar .container {
   height: 70px;
   display: flex;
