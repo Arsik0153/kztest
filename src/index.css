@@ -31,3 +31,16 @@ body {
     width: 1170px;
   }
 }
+
+a{
+  text-decoration: none;
+  color: #EC6236;
+}
+
+img{
+  max-width: 100%;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
