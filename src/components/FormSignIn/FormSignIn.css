@@ -1,0 +1,86 @@
+.header__form {
+  width: 100%;
+  border: 1px solid rgba(198, 198, 198, 0.288);
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.058);
+  padding: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.header__form form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__form h4 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.header__form input {
+  padding: 8px 20px;
+  border: 2px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #EC6236;
+  width: 100%;
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.header__form input::placeholder {
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 210%;
+  color: #BAC5D1;
+}
+
+.header__form label {
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+  font-size: 18px;
+  color: #BAC5D1;
+  padding: 10px 0;
+}
+
+.header__form label:first-child {
+  margin-top: 20px;
+}
+
+.header__form_submit-btn {
+  padding: 15px 0;
+  text-align: center;
+  background: linear-gradient(180deg, #EC6236 0%, #FF9371 100%);
+  border: none;
+  color: #fff;
+  font-family: "Montserrat SemiBold";
+  font-size: 24px;
+  border: 1px solid #EC6236;
+  cursor: pointer;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.header__form_submit-btn:hover{
+  background: #fff;
+  color: #EC6236;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .header__form-group{
+    flex-direction: column;
+  }
+}
+
+.header__right-already {
+  width: 100%;
+  border-top: 2px solid #F4F5F5;
+  margin-top: 25px;
+  padding-top: 20px;
+}

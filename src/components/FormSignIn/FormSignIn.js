@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import './Form.css';
+import './FormSignIn.css';
+import { Link } from 'react-router-dom';
 
-class Form extends Component{
+class FormSignIn extends Component{
 
   state = {
-    firstName: '',
-    lastName: '',
     email: '',
     password: ''
   }
@@ -24,25 +23,8 @@ class Form extends Component{
   render(){
     return (
       <div className="header__form">
-        <h4>Тіркелу</h4>
+        <h4>Кіру</h4>
         <form onSubmit={this.handleSubmit}>
-          <label>Аты-жөніңіз</label>
-          <div className="header__form-group">
-            <input 
-              type="text" 
-              placeholder="Аты"
-              id="firstName"
-              onChange={this.handleChange}
-              required
-            />
-            <input 
-              type="text" 
-              placeholder="Тегі" 
-              id="lastName"
-              onChange={this.handleChange}
-              required
-            />
-          </div>
           <label>E-mail</label>
           <input 
             type="email" 
@@ -59,14 +41,14 @@ class Form extends Component{
             onChange={this.handleChange}
             required
           />
-          <button className="header__form_submit-btn">Тіркелу</button>
+          <button className="header__form_submit-btn">Кіру</button>
         </form>
         <div className="header__right-already">
-          <p>Бұрында тіркелдіңіз бе? <a href="">Кіру</a></p>
+          <p>Әлі тіркелген жоқсыз ба? <Link to='/'>Тіркелу</Link></p>
         </div>
       </div>
     )
   }
 }
 
-export default Form;
+export default FormSignIn;

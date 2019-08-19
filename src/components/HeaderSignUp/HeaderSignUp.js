@@ -1,9 +1,9 @@
 import React from 'react';
-import './Header.css';
+import './HeaderSignUp.css';
 import testing from './../../static/img/header__mobile-testing.svg';
-import Form from '../Form/Form';
+import FormSignUp from '../FormSignUp/FormSignUp';
 
-const Header = () => {
+const HeaderSignUp = () => {
   return(
     <div className="header">
       <div className="container">
@@ -12,11 +12,11 @@ const Header = () => {
           <img src={testing} alt=""/>
         </div>
         <div className="header__right">
-          <Form />
+          <FormSignUp />
         </div>
       </div>
     </div>
   );
 }
 
-export default Header;
+export default HeaderSignUp;
