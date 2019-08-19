@@ -37,6 +37,10 @@ a{
   color: #EC6236;
 }
 
+a:hover{
+  text-decoration: underline;
+}
+
 img{
   max-width: 100%;
 }

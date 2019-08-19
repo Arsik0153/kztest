@@ -61,6 +61,9 @@ class Form extends Component{
           />
           <button className="header__form_submit-btn">Тіркелу</button>
         </form>
+        <div className="header__right-already">
+          <p>Бұрында тіркелдіңіз бе? <a href="">Кіру</a></p>
+        </div>
       </div>
     )
   }
