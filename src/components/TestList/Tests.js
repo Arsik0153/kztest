@@ -1,5 +1,6 @@
 import React from 'react'
 import './Tests.css';
+import Test from '../Test/Test';
 
 const Tests = () => {
   return (
@@ -10,7 +11,11 @@ const Tests = () => {
           <span>+</span>
           <h3>Жаңа тест құру</h3>
         </div>
-        
+        <Test />
+        <Test />
+        <Test />
+        <Test />
+        <Test />
       </div>
     </div>
   )

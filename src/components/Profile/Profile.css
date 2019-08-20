@@ -1,5 +1,6 @@
 .profile {
   width: 350px;
+  height: 400px;
   border: 1px solid rgba(198, 198, 198, 0.288);
   box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.058);
   padding: 40px;
@@ -28,4 +29,10 @@
 
 .profile p span{
   color: #EC6236;
+}
+
+@media screen and (max-width: 768px){
+  .profile {
+    width: 100%;
+  }
 }

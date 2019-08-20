@@ -3,3 +3,9 @@
   flex-direction: row;
   margin-top: 50px;
 }
+
+@media screen and (max-width: 768px){
+  .cabinet .container {
+    flex-direction: column;
+  }
+}

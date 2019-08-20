@@ -29,6 +29,7 @@
   align-items: center;
   cursor: pointer;
   transition: .3s;
+  overflow: hidden;
 }
 
 .test_new:hover h3{
@@ -53,4 +54,11 @@
   font-family: "Montserrat SemiBold";
   font-size: 20px;
   transition: .3s;
+}
+
+@media screen and (max-width: 768px){
+  .tests{
+    width: 100%;
+    margin: 50px 0;
+  }
 }

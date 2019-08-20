@@ -1,0 +1,14 @@
+.test_default{
+  background-color: #fff;
+  border: 1px solid rgba(198, 198, 198, 0.288);
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.058);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.test_default .test_code{
+  color: #EC6236;
+  font-weight: bold;
+  font-size: 24px;
+}
