@@ -7,13 +7,36 @@ class NewTest extends Component {
   state = {
     name: '',
     duration: '',
-    testList: []
+    questionsList: [
+      {
+        question: 'Сұрақ',
+        answers: [
+          '',
+          '',
+          ''
+        ]
+      }
+    ]
   }
 
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
     });
+  }
+
+  addAnswer = () => {
+    
+  }
+
+  changeAnswer = (questionId, answerId, e) => {
+    let questionsList = this.state.questionsList;
+    questionsList[questionId].answers[answerId] = e.target.value;
+    this.setState({
+      ...this.state,
+      questionsList
+    });
+    console.log(this.state.questionsList);
   }
 
   render(){
@@ -41,10 +64,19 @@ class NewTest extends Component {
           <div className="new-test__list">
             <h2>Тест сұрақтары</h2>
             <div className="new-test__list_block">
-              <Question />
-              <Question />
+              { this.state.questionsList.map((question, index) => {
+                return(
+                  <Question 
+                    question={question} 
+                    key={index}
+                    id={index}
+                    addAnswer={this.addAnswer}
+                    changeAnswer={this.changeAnswer}
+                  />
+                );
+              })}
             </div>
-            <div className="question_add" onClick={this.addAnswer}>
+            <div className="question_add">
               <span>+</span> Сұрақ қосу
             </div>
           </div>
