@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HeaderSignUp from './components/HeaderSignUp/HeaderSignUp';
 import HeaderSignIn from './components/HeaderSignIn/HeaderSignIn';
 import Cabinet from './components/Cabinet/Cabinet';
+import NewTest from './components/Cabinet/NewTest/NewTest';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route exact path='/' component={HeaderSignUp} />
           <Route path='/signin' component={HeaderSignIn} />
           <Route path='/cabinet' component={Cabinet} />
+          <Route path='/new' component={NewTest} />
         </Switch>
       </div>
     </BrowserRouter>

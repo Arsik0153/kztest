@@ -5,6 +5,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
   position: fixed;
   margin-top: -50px;
+  z-index: 999;
 }
 
 .navbar a:hover{

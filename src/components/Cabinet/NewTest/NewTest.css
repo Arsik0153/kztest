@@ -1,0 +1,46 @@
+.new-test .container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.new-test h2 {
+  margin-bottom: 50px;
+}
+
+.new-test__main{
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-test h4 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.new-test-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.new-test__list {
+  width: calc(100% - 320px);
+  margin: 0 50px;
+}
+
+@media screen and (max-width: 768px){
+  .new-test__main{
+    width: 100%;
+  }
+  .new-test .container {
+    flex-direction: column;
+  }
+  .new-test__list {
+    width: 100%;
+    margin: 30px 0;
+  }
+}

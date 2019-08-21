@@ -19,44 +19,10 @@
   font-size: 24px;
 }
 
-.header__form input {
-  padding: 8px 20px;
-  border: 2px solid #EEEEEE;
-  box-sizing: border-box;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #EC6236;
-  width: 100%;
-  font-family: "Montserrat SemiBold";
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.header__form input::placeholder {
-  font-family: "Montserrat SemiBold";
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 210%;
-  color: #BAC5D1;
-}
-
 .header__form-group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.header__form-group input:first-child{
-  margin-right: 30px;
-}
-
-.header__form label {
-  font-family: "Montserrat SemiBold";
-  font-weight: 600;
-  font-size: 18px;
-  color: #BAC5D1;
-  padding: 10px 0;
 }
 
 .header__form label:first-child {

@@ -1,0 +1,47 @@
+.question {
+  position: relative;
+  margin: 30px 0;
+}
+
+.question div[contenteditable="true"] {
+  border: 2px dashed #EC6236;
+  padding: 8px 20px;
+  border-radius: 6px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.question h4{
+  margin: 0;
+}
+
+.question_number{
+  width: 40px;
+  height: 40px;
+  background: #EC6236;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.question_add {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, #EC6236 0%, #FF9371 100%);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.question_add span {
+  font-size: 28px;
+  margin: 0 5px;
+}
