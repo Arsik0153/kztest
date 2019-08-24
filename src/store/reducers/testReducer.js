@@ -11,11 +11,14 @@ const initState = {
 const testReducer = (state = initState, action) => {
   switch (action.type) {
     case "CREATE_TEST":
-      console.log("test created")
-      break
+      console.log(action.type);
+      return state;
+    case "CREATE_TEST_ERROR":
+      console.log(action.type);
+      return state;
     default:
+      return state;
   }
-  return state;
 }
 
 export default testReducer;
