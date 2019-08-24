@@ -3,7 +3,6 @@ import './NewTest.css';
 import Question from '../../Question/Question';
 import { createTest } from '../../../store/actions/testActions';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 
 class NewTest extends Component {
 
@@ -80,7 +79,7 @@ class NewTest extends Component {
 
   handleSubmit = () => {
     this.props.createTest(this.state);
-    return <Redirect to='/cabinet'/>
+    this.props.history.push('/cabinet');
   }
 
   render(){

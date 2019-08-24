@@ -11,7 +11,7 @@ const initState = {
 const testReducer = (state = initState, action) => {
   switch (action.type) {
     case "CREATE_TEST":
-      console.log(action.test)
+      console.log("test created")
       break
     default:
   }
