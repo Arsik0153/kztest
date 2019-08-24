@@ -7,6 +7,7 @@ class NewTest extends Component {
   state = {
     name: '',
     duration: '',
+    code: Math.floor(1000 + Math.random() * 9000),
     questionsList: [
       {
         question: 'Сұрақ',
@@ -20,13 +21,40 @@ class NewTest extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value
-    });
+    e.target.id === "duration" ? (
+      this.setState({
+        [e.target.id]: e.target.value.replace(/[^0-9]+/g, "")
+      })
+    ) : (
+      this.setState({
+        [e.target.id]: e.target.value
+      })
+    )
   }
 
-  addAnswer = () => {
-    
+  addAnswer = (id) => {
+    let questionsList = this.state.questionsList;
+    questionsList[id].answers.push('');
+    this.setState({
+      ...this.state,
+      questionsList
+    })
+  }
+
+  addQuestion = () => {
+    let questionsList = this.state.questionsList;
+    questionsList.push({
+      question: 'Сұрақ',
+      answers: [
+        '',
+        '',
+        ''
+      ]
+    });
+    this.setState({
+      ...this.state,
+      questionsList
+    });
   }
 
   changeAnswer = (questionId, answerId, e) => {
@@ -36,7 +64,19 @@ class NewTest extends Component {
       ...this.state,
       questionsList
     });
-    console.log(this.state.questionsList);
+  }
+
+  changeQuestion = (questionId, e) => {
+    let questionsList = this.state.questionsList;
+    questionsList[questionId].question = e.target.value.replace('<h4>', '').replace('</h4>', '');
+    this.setState({
+      ...this.state,
+      questionsList
+    });
+  }
+
+  handleSubmit = () => {
+    console.log(this.state)
   }
 
   render(){
@@ -54,11 +94,15 @@ class NewTest extends Component {
             />
             <label>Тестке берілетін уақыт (мин)</label>
             <input 
-              type="tel" 
+              type="number"
+              min="0"
               id="duration"
               onChange={this.handleChange}
               required
             />
+            <div className="question_add" onClick={this.handleSubmit} style={{width: '100%'}}>
+              Сақтау
+            </div>
           </div>
 
           <div className="new-test__list">
@@ -72,11 +116,12 @@ class NewTest extends Component {
                     id={index}
                     addAnswer={this.addAnswer}
                     changeAnswer={this.changeAnswer}
+                    changeQuestion={this.changeQuestion}
                   />
                 );
               })}
             </div>
-            <div className="question_add">
+            <div className="question_add" onClick={this.addQuestion}>
               <span>+</span> Сұрақ қосу
             </div>
           </div>

@@ -2,14 +2,15 @@ import React from 'react'
 import './Question.css'
 import ContentEditable from 'react-contenteditable'
 
-const Question = ({question, id, addAnswer, changeAnswer}) => {
+const Question = ({question, id, addAnswer, changeAnswer, changeQuestion}) => {
   
   return (
     <div className="question block">
-      <div className="question_number">1</div>
+      <div className="question_number">{id+1}</div>
       <ContentEditable
         html={`<h4>${question.question}</h4>`}
         disabled={false}
+        onChange={(e) => {changeQuestion(id, e)}}
       />
 
       {question.answers.map((answer, index) => {
@@ -23,7 +24,7 @@ const Question = ({question, id, addAnswer, changeAnswer}) => {
         )
       })}
 
-      <div className="question_add" onClick={addAnswer}>
+      <div className="question_add" onClick={() => {addAnswer(id)}}>
         <span>+</span> Жауап қосу
       </div>
     </div>

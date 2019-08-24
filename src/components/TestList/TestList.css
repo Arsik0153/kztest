@@ -4,6 +4,10 @@
   margin: 0 50px;
 }
 
+.tests a:hover {
+  text-decoration: none;
+}
+
 .tests__flex {
   display: flex;
   flex-direction: row;

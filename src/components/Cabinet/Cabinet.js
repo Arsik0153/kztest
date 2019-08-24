@@ -1,20 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 /* import { Link } from 'react-router-dom'; */
 import './Cabinet.css';
 import Profile from '../Profile/Profile';
-import Tests from '../TestList/Tests';
+import TestList from '../TestList/TestList';
+import { connect } from 'react-redux';
 
-class Cabinet extends Component {
-  render(){
-    return(
-      <div className="cabinet first">
-        <div className="container">
-          <Profile />
-          <Tests />
-        </div>
+const Cabinet = (props) => {
+  return(
+    <div className="cabinet first">
+      <div className="container">
+        <Profile testCount={props.tests.length} />
+        <TestList tests={props.tests}/>
       </div>
-    );
+    </div>
+  )
+}
+
+const mapStateToProps = (state) => {
+  return {
+    tests: state.test.tests
   }
 }
 
-export default Cabinet;
+export default connect(mapStateToProps)(Cabinet);

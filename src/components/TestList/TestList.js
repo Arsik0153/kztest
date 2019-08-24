@@ -1,9 +1,9 @@
 import React from 'react'
-import './Tests.css';
+import './TestList.css';
 import Test from '../Test/Test';
 import { Link } from 'react-router-dom';
 
-const Tests = () => {
+const Tests = ({tests}) => {
   return (
     <div className="tests">
       <h2>Барлық тесттер</h2>
@@ -14,11 +14,11 @@ const Tests = () => {
             <h3>Жаңа тест құру</h3>
           </div>
         </Link>
-        <Test />
-        <Test />
-        <Test />
-        <Test />
-        <Test />
+        { tests && tests.map((test) => {
+          return(
+            <Test test={test} key={test.id}/>
+          )
+        }) }
       </div>
     </div>
   )
