@@ -1,25 +1,25 @@
 import React from 'react'
 import './Question.css'
-import ContentEditable from 'react-contenteditable'
 
 const Question = ({question, id, addAnswer, changeAnswer, changeQuestion}) => {
   
   return (
     <div className="question block">
       <div className="question_number">{id+1}</div>
-      <ContentEditable
-        html={`<h4>${question.question}</h4>`}
-        disabled={false}
+      <input 
+        type="text" 
+        value={question.question} 
         onChange={(e) => {changeQuestion(id, e)}}
+        className="question__question"
       />
 
       {question.answers.map((answer, index) => {
         return(
-          <ContentEditable
-            disabled={false}
+          <input 
+            type="text" 
+            value={question.answers[index]} 
             onChange={(e) => {changeAnswer(id, index, e)}}
             key={index}
-            html={question.answers[index]}
           />
         )
       })}

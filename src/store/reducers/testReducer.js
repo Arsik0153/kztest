@@ -9,6 +9,12 @@ const initState = {
 };
 
 const testReducer = (state = initState, action) => {
+  switch (action.type) {
+    case "CREATE_TEST":
+      console.log(action.test)
+      break
+    default:
+  }
   return state;
 }
 

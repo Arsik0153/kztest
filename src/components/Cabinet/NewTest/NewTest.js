@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import './NewTest.css';
 import Question from '../../Question/Question';
+import { createTest } from '../../../store/actions/testActions';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 class NewTest extends Component {
 
@@ -76,7 +79,8 @@ class NewTest extends Component {
   }
 
   handleSubmit = () => {
-    console.log(this.state)
+    this.props.createTest(this.state);
+    return <Redirect to='/cabinet'/>
   }
 
   render(){
@@ -131,4 +135,10 @@ class NewTest extends Component {
   }
 }
 
-export default NewTest
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createTest: (test) => dispatch(createTest(test))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(NewTest)

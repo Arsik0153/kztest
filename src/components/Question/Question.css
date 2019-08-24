@@ -3,6 +3,16 @@
   margin: 30px 0;
 }
 
+.question__question {
+  font-size: 20px;
+}
+
+.question input {
+  overflow-wrap: break-word;
+  clear: left;
+  display: inline;
+}
+
 .question div[contenteditable="true"] {
   border: 2px dashed #EC6236;
   padding: 8px 20px;
