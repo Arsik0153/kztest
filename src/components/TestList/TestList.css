@@ -27,13 +27,16 @@
 
 .test_new {
   background: linear-gradient(0deg, #EC6236 0%, #FF9371 100%);
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   cursor: pointer;
   transition: .3s;
   overflow: hidden;
+  padding: 0 50px;
+}
+.test_new a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
 }
 
 .test_new:hover h3{

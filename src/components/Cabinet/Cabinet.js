@@ -8,11 +8,10 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 
 const Cabinet = (props) => {
-  console.log(props)
   return(
     <div className="cabinet first">
       <div className="container">
-        <Profile testCount={props.tests.length} />
+        <Profile testCount={props.tests.tests ? props.tests.tests.length : 0} />
         <TestList tests={props.tests.tests}/>
       </div>
     </div>

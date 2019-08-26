@@ -6,6 +6,7 @@ import HeaderSignUp from './components/HeaderSignUp/HeaderSignUp';
 import HeaderSignIn from './components/HeaderSignIn/HeaderSignIn';
 import Cabinet from './components/Cabinet/Cabinet';
 import NewTest from './components/Cabinet/NewTest/NewTest';
+import TestDetails from './components/TestDetails/TestDetails';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path='/signin' component={HeaderSignIn} />
           <Route path='/cabinet' component={Cabinet} />
           <Route path='/new' component={NewTest} />
+          <Route path='/test/:id' component={TestDetails} />
         </Switch>
       </div>
     </BrowserRouter>
