@@ -4,13 +4,16 @@ import './Cabinet.css';
 import Profile from '../Profile/Profile';
 import TestList from '../TestList/TestList';
 import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 const Cabinet = (props) => {
+  console.log(props)
   return(
     <div className="cabinet first">
       <div className="container">
         <Profile testCount={props.tests.length} />
-        <TestList tests={props.tests}/>
+        <TestList tests={props.tests.tests}/>
       </div>
     </div>
   )
@@ -18,8 +21,13 @@ const Cabinet = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    tests: state.test.tests
+    tests: state.firestore.ordered
   }
 }
 
-export default connect(mapStateToProps)(Cabinet);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { collection: 'tests'}
+  ])
+)(Cabinet);

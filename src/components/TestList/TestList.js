@@ -4,6 +4,7 @@ import Test from '../Test/Test';
 import { Link } from 'react-router-dom';
 
 const Tests = ({tests}) => {
+  console.log(tests);
   return (
     <div className="tests">
       <h2>Барлық тесттер</h2>
