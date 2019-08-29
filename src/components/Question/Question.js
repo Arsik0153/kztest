@@ -24,7 +24,7 @@ const Question = ({question, id, addAnswer, changeAnswer, changeQuestion, change
 
       {question.answers.map((answer, index) => {
         return(
-          <div className="question__flex">
+          <div className="question__flex" key={index}>
             <input 
               type="text" 
               value={question.answers[index]} 

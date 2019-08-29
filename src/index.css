@@ -70,13 +70,13 @@ input {
   font-size: 16px;
   color: #EC6236;
   width: 100%;
-  font-family: "Montserrat SemiBold";
+  font-family: "Montserrat";
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 input::placeholder {
-  font-family: "Montserrat SemiBold";
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 210%;
@@ -88,9 +88,12 @@ input:first-child{
 }
 
 label {
-  font-family: "Montserrat SemiBold";
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 18px;
   color: rgb(157, 168, 179);
   padding: 10px 0;
+}
+button{
+  font-family: "Montserrat";
 }
