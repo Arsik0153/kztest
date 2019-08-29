@@ -16,8 +16,9 @@ class NewTest extends Component {
         answers: [
           '',
           '',
-          ''
-        ]
+          '',
+        ],
+        correct: []
       }
     ]
   }
@@ -51,7 +52,8 @@ class NewTest extends Component {
         '',
         '',
         ''
-      ]
+      ],
+      correct: []
     });
     this.setState({
       ...this.state,
@@ -75,6 +77,23 @@ class NewTest extends Component {
       ...this.state,
       questionsList
     });
+  }
+
+  changeCorrect = (questionId, answerId, isChecked) => {
+    let questionsList = this.state.questionsList;
+    if(isChecked){
+      questionsList[questionId].correct.push(answerId);
+    } else {
+      questionsList[questionId].correct = questionsList[questionId].correct.filter((c) => {
+        return c !== answerId
+      });
+    }
+
+    this.setState({
+      ...this.state,
+      questionsList
+    });
+    console.log(this.state.questionsList);
   }
 
   handleSubmit = () => {
@@ -120,6 +139,7 @@ class NewTest extends Component {
                     addAnswer={this.addAnswer}
                     changeAnswer={this.changeAnswer}
                     changeQuestion={this.changeQuestion}
+                    changeCorrect={this.changeCorrect}
                   />
                 );
               })}

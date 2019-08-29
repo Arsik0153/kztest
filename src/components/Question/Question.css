@@ -7,20 +7,6 @@
   font-size: 20px;
 }
 
-.question input {
-  overflow-wrap: break-word;
-  clear: left;
-  display: inline;
-}
-
-.question div[contenteditable="true"] {
-  border: 2px dashed #EC6236;
-  padding: 8px 20px;
-  border-radius: 6px;
-  margin: 15px 0;
-  overflow: hidden;
-}
-
 .question h4{
   margin: 0;
 }
@@ -54,4 +40,35 @@
 .question_add span {
   font-size: 28px;
   margin: 0 5px;
+}
+
+.question__flex{
+  display: flex;
+  flex-direction: row;
+}
+
+.question_checkbox{
+  width: 39px;
+  height: 39px;
+  border: 2px solid #EC6236;
+  background: #fff;
+  border-radius: 0;
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+  margin-left: -3px;
+}
+
+.question__question-checked{
+  background-color: #EC6236;
+}
+
+.question__flex input {
+  margin-right: 0;
+  padding-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.question_wout-border-right{
+  border-right: none;
 }

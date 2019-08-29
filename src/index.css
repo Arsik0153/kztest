@@ -45,7 +45,7 @@ img{
   max-width: 100%;
 }
 
-textarea:focus, input:focus, div[contenteditable="true"]:focus{
+textarea:focus, input:focus, div[contenteditable="true"]:focus, button:focus{
   outline: none;
   border: 2px solid #EC6236 !important;
 }
