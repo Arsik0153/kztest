@@ -1,3 +1,11 @@
 .test-detail {
-  height: 200px;
+  height: 250px;
+}
+
+.test-detail a{
+  color: #fff;
+}
+
+.test-detail a:hover{
+  text-decoration: none;
 }

@@ -1,0 +1,7 @@
+.test__list-block{
+    margin-top: -30px;
+}
+
+.test__list-block input {
+    pointer-events: none;
+}
